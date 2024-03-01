@@ -1,0 +1,538 @@
+[0m20:47:00.365214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E1C253A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E1C2522D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E1C253F50>]}
+
+
+============================== 20:47:00.370060 | 2c92db07-fb64-4016-91ef-cfa8bd06a0c8 ==============================
+[0m20:47:00.370060 [info ] [MainThread]: Running with dbt=1.7.9
+[0m20:47:00.371536 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\fmmon\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:47:00.372540 [info ] [MainThread]: dbt version: 1.7.9
+[0m20:47:00.374535 [info ] [MainThread]: python version: 3.12.2
+[0m20:47:00.375076 [info ] [MainThread]: python path: C:\Users\fmmon\labs_project\Scripts\python.exe
+[0m20:47:00.376075 [info ] [MainThread]: os info: Windows-11-10.0.22621-SP0
+[0m20:47:01.019746 [info ] [MainThread]: Using profiles dir at C:\Users\fmmon\.dbt
+[0m20:47:01.021827 [info ] [MainThread]: Using profiles.yml file at C:\Users\fmmon\.dbt\profiles.yml
+[0m20:47:01.022824 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\fmmon\labs_project\dbt_project.yml
+[0m20:47:01.025335 [info ] [MainThread]: adapter type: snowflake
+[0m20:47:01.027597 [info ] [MainThread]: adapter version: 1.7.2
+[0m20:47:01.028596 [info ] [MainThread]: Configuration:
+[0m20:47:01.029592 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:47:01.030590 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:47:01.032580 [info ] [MainThread]: Required dependencies:
+[0m20:47:01.033713 [debug] [MainThread]: Executing "git --help"
+[0m20:47:01.042773 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m20:47:01.044284 [info ] [MainThread]: Connection:
+[0m20:47:01.045792 [info ] [MainThread]:   account: dz46997.us-east-1
+[0m20:47:01.047194 [info ] [MainThread]:   user: te_fmonteiro
+[0m20:47:01.048190 [info ] [MainThread]:   database: te_analytics
+[0m20:47:01.049511 [info ] [MainThread]:   warehouse: test_wh
+[0m20:47:01.050552 [info ] [MainThread]:   role: te_role_fmonteiro
+[0m20:47:01.051650 [info ] [MainThread]:   schema: te_fmonteiro
+[0m20:47:01.051650 [info ] [MainThread]:   authenticator: None
+[0m20:47:01.052963 [info ] [MainThread]:   private_key_path: None
+[0m20:47:01.052963 [info ] [MainThread]:   oauth_client_id: None
+[0m20:47:01.054472 [info ] [MainThread]:   query_tag: None
+[0m20:47:01.055485 [info ] [MainThread]:   client_session_keep_alive: False
+[0m20:47:01.056492 [info ] [MainThread]:   host: None
+[0m20:47:01.057885 [info ] [MainThread]:   port: None
+[0m20:47:01.059057 [info ] [MainThread]:   proxy_host: None
+[0m20:47:01.059562 [info ] [MainThread]:   proxy_port: None
+[0m20:47:01.060787 [info ] [MainThread]:   protocol: None
+[0m20:47:01.062948 [info ] [MainThread]:   connect_retries: 1
+[0m20:47:01.063453 [info ] [MainThread]:   connect_timeout: None
+[0m20:47:01.064630 [info ] [MainThread]:   retry_on_database_errors: False
+[0m20:47:01.065134 [info ] [MainThread]:   retry_all: False
+[0m20:47:01.066167 [info ] [MainThread]:   insecure_mode: False
+[0m20:47:01.067168 [info ] [MainThread]:   reuse_connections: None
+[0m20:47:01.068166 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m20:47:01.070172 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m20:47:01.072250 [debug] [MainThread]: Using snowflake connection "debug"
+[0m20:47:01.073657 [debug] [MainThread]: On debug: select 1 as id
+[0m20:47:01.074164 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:47:03.094364 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m20:47:03.095401 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m20:47:03.096327 [debug] [MainThread]: On debug: No close available on handle
+[0m20:47:03.096842 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m20:47:03.097902 [info ] [MainThread]: [31m3 checks failed:[0m
+[0m20:47:03.098932 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\fmmon\labs_project\dbt_project.yml> not found
+
+[0m20:47:03.100358 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m20:47:03.101359 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001 (08001): Failed to connect to DB: dz46997.us-east-1.snowflakecomputing.com:443. Incorrect username or password was specified.
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m20:47:03.104150 [debug] [MainThread]: Command `dbt debug` failed at 20:47:03.104150 after 2.90 seconds
+[0m20:47:03.105151 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:47:03.105655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E1BE09E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E1CF208C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E1BDD5940>]}
+[0m20:47:03.106655 [debug] [MainThread]: Flushing usage events
+[0m20:48:26.839274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC9F923890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC9F923620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC9F9239E0>]}
+
+
+============================== 20:48:26.843126 | b3a40275-4d32-446a-bf48-3073b9cc83c6 ==============================
+[0m20:48:26.843126 [info ] [MainThread]: Running with dbt=1.7.9
+[0m20:48:26.844123 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\fmmon\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m20:48:26.844626 [info ] [MainThread]: dbt version: 1.7.9
+[0m20:48:26.845133 [info ] [MainThread]: python version: 3.12.2
+[0m20:48:26.846032 [info ] [MainThread]: python path: C:\Users\fmmon\labs_project\Scripts\python.exe
+[0m20:48:26.846032 [info ] [MainThread]: os info: Windows-11-10.0.22621-SP0
+[0m20:48:27.190502 [info ] [MainThread]: Using profiles dir at C:\Users\fmmon\.dbt
+[0m20:48:27.191456 [info ] [MainThread]: Using profiles.yml file at C:\Users\fmmon\.dbt\profiles.yml
+[0m20:48:27.192573 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\fmmon\labs_project\dbt_project.yml
+[0m20:48:27.194579 [info ] [MainThread]: adapter type: snowflake
+[0m20:48:27.195138 [info ] [MainThread]: adapter version: 1.7.2
+[0m20:48:27.196006 [info ] [MainThread]: Configuration:
+[0m20:48:27.196752 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:48:27.197314 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:48:27.197314 [info ] [MainThread]: Required dependencies:
+[0m20:48:27.198611 [debug] [MainThread]: Executing "git --help"
+[0m20:48:27.208760 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m20:48:27.218141 [info ] [MainThread]: Connection:
+[0m20:48:27.221478 [info ] [MainThread]:   account: dz46997.us-east-1
+[0m20:48:27.222476 [info ] [MainThread]:   user: te_fmonteiro
+[0m20:48:27.225485 [info ] [MainThread]:   database: te_analytics
+[0m20:48:27.226462 [info ] [MainThread]:   warehouse: test_wh
+[0m20:48:27.227494 [info ] [MainThread]:   role: te_role_fmonteiro
+[0m20:48:27.227494 [info ] [MainThread]:   schema: te_fmonteiro
+[0m20:48:27.228491 [info ] [MainThread]:   authenticator: None
+[0m20:48:27.229488 [info ] [MainThread]:   private_key_path: None
+[0m20:48:27.230485 [info ] [MainThread]:   oauth_client_id: None
+[0m20:48:27.231483 [info ] [MainThread]:   query_tag: None
+[0m20:48:27.231483 [info ] [MainThread]:   client_session_keep_alive: False
+[0m20:48:27.232479 [info ] [MainThread]:   host: None
+[0m20:48:27.233478 [info ] [MainThread]:   port: None
+[0m20:48:27.236038 [info ] [MainThread]:   proxy_host: None
+[0m20:48:27.239034 [info ] [MainThread]:   proxy_port: None
+[0m20:48:27.240032 [info ] [MainThread]:   protocol: None
+[0m20:48:27.242028 [info ] [MainThread]:   connect_retries: 1
+[0m20:48:27.243025 [info ] [MainThread]:   connect_timeout: None
+[0m20:48:27.244535 [info ] [MainThread]:   retry_on_database_errors: False
+[0m20:48:27.245052 [info ] [MainThread]:   retry_all: False
+[0m20:48:27.245986 [info ] [MainThread]:   insecure_mode: False
+[0m20:48:27.245986 [info ] [MainThread]:   reuse_connections: None
+[0m20:48:27.247040 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m20:48:27.248286 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m20:48:27.249355 [debug] [MainThread]: Using snowflake connection "debug"
+[0m20:48:27.249859 [debug] [MainThread]: On debug: select 1 as id
+[0m20:48:27.249859 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:48:28.803020 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m20:48:28.803020 [debug] [MainThread]: On debug: Close
+[0m20:48:29.131444 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:48:29.132741 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m20:48:29.134617 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\fmmon\labs_project\dbt_project.yml> not found
+
+[0m20:48:29.135676 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m20:48:29.137808 [debug] [MainThread]: Command `dbt debug` failed at 20:48:29.137808 after 2.42 seconds
+[0m20:48:29.138312 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:48:29.139375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC9EB22960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC9F766060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECA0650FB0>]}
+[0m20:48:29.140376 [debug] [MainThread]: Flushing usage events
+[0m20:50:52.272585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014C97437770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014C97437E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014C97434D70>]}
+
+
+============================== 20:50:52.278158 | f99a0808-f69f-4a82-b6cd-6836a3cb08d2 ==============================
+[0m20:50:52.278158 [info ] [MainThread]: Running with dbt=1.7.9
+[0m20:50:52.279156 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\fmmon\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:50:52.280825 [info ] [MainThread]: dbt version: 1.7.9
+[0m20:50:52.281954 [info ] [MainThread]: python version: 3.12.2
+[0m20:50:52.281954 [info ] [MainThread]: python path: C:\Users\fmmon\AppData\Local\Programs\Python\Python312\python.exe
+[0m20:50:52.281954 [info ] [MainThread]: os info: Windows-11-10.0.22621-SP0
+[0m20:50:52.755934 [info ] [MainThread]: Using profiles dir at C:\Users\fmmon\.dbt
+[0m20:50:52.755934 [info ] [MainThread]: Using profiles.yml file at C:\Users\fmmon\.dbt\profiles.yml
+[0m20:50:52.757736 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\fmmon\labs_project\dbt_project.yml
+[0m20:50:52.759119 [info ] [MainThread]: adapter type: snowflake
+[0m20:50:52.759119 [info ] [MainThread]: adapter version: 1.7.2
+[0m20:50:52.760236 [info ] [MainThread]: Configuration:
+[0m20:50:52.760236 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:50:52.761478 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:50:52.761981 [info ] [MainThread]: Required dependencies:
+[0m20:50:52.763618 [debug] [MainThread]: Executing "git --help"
+[0m20:50:52.770051 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m20:50:52.770703 [info ] [MainThread]: Connection:
+[0m20:50:52.771887 [info ] [MainThread]:   account: dz46997.us-east-1
+[0m20:50:52.771887 [info ] [MainThread]:   user: te_fmonteiro
+[0m20:50:52.772947 [info ] [MainThread]:   database: te_analytics
+[0m20:50:52.774027 [info ] [MainThread]:   warehouse: test_wh
+[0m20:50:52.775043 [info ] [MainThread]:   role: te_role_fmonteiro
+[0m20:50:52.775043 [info ] [MainThread]:   schema: te_fmonteiro
+[0m20:50:52.776370 [info ] [MainThread]:   authenticator: None
+[0m20:50:52.777371 [info ] [MainThread]:   private_key_path: None
+[0m20:50:52.777371 [info ] [MainThread]:   oauth_client_id: None
+[0m20:50:52.778368 [info ] [MainThread]:   query_tag: None
+[0m20:50:52.779365 [info ] [MainThread]:   client_session_keep_alive: False
+[0m20:50:52.780393 [info ] [MainThread]:   host: None
+[0m20:50:52.781398 [info ] [MainThread]:   port: None
+[0m20:50:52.782503 [info ] [MainThread]:   proxy_host: None
+[0m20:50:52.782503 [info ] [MainThread]:   proxy_port: None
+[0m20:50:52.784300 [info ] [MainThread]:   protocol: None
+[0m20:50:52.785824 [info ] [MainThread]:   connect_retries: 1
+[0m20:50:52.787823 [info ] [MainThread]:   connect_timeout: None
+[0m20:50:52.788819 [info ] [MainThread]:   retry_on_database_errors: False
+[0m20:50:52.790118 [info ] [MainThread]:   retry_all: False
+[0m20:50:52.790118 [info ] [MainThread]:   insecure_mode: False
+[0m20:50:52.791191 [info ] [MainThread]:   reuse_connections: None
+[0m20:50:52.792200 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m20:50:52.794521 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m20:50:52.796016 [debug] [MainThread]: Using snowflake connection "debug"
+[0m20:50:52.796528 [debug] [MainThread]: On debug: select 1 as id
+[0m20:50:52.796528 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:50:54.086612 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m20:50:54.088693 [debug] [MainThread]: On debug: Close
+[0m20:50:54.453616 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:50:54.455074 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m20:50:54.456155 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\fmmon\labs_project\dbt_project.yml> not found
+
+[0m20:50:54.457564 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m20:50:54.460757 [debug] [MainThread]: Command `dbt debug` failed at 20:50:54.460757 after 2.33 seconds
+[0m20:50:54.460757 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:50:54.462496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014C970F98B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014C98003FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014C981163F0>]}
+[0m20:50:54.462496 [debug] [MainThread]: Flushing usage events
+[0m20:51:13.365036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AEEE29E420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AEEF1E4DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AEEF1E4EF0>]}
+
+
+============================== 20:51:13.368929 | 7297d742-f6d7-4c1a-9a84-0c5e13afa8a3 ==============================
+[0m20:51:13.368929 [info ] [MainThread]: Running with dbt=1.7.9
+[0m20:51:13.370281 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\fmmon\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m20:51:13.370786 [info ] [MainThread]: dbt version: 1.7.9
+[0m20:51:13.370786 [info ] [MainThread]: python version: 3.12.2
+[0m20:51:13.371934 [info ] [MainThread]: python path: C:\Users\fmmon\labs_project\Scripts\python.exe
+[0m20:51:13.371934 [info ] [MainThread]: os info: Windows-11-10.0.22621-SP0
+[0m20:51:13.727637 [info ] [MainThread]: Using profiles dir at C:\Users\fmmon\.dbt
+[0m20:51:13.727637 [info ] [MainThread]: Using profiles.yml file at C:\Users\fmmon\.dbt\profiles.yml
+[0m20:51:13.729281 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\fmmon\labs_project\dbt_project.yml
+[0m20:51:13.729785 [info ] [MainThread]: adapter type: snowflake
+[0m20:51:13.731195 [info ] [MainThread]: adapter version: 1.7.2
+[0m20:51:13.731195 [info ] [MainThread]: Configuration:
+[0m20:51:13.732468 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:51:13.732468 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:51:13.734116 [info ] [MainThread]: Required dependencies:
+[0m20:51:13.735132 [debug] [MainThread]: Executing "git --help"
+[0m20:51:13.744536 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m20:51:13.745044 [info ] [MainThread]: Connection:
+[0m20:51:13.746042 [info ] [MainThread]:   account: dz46997.us-east-1
+[0m20:51:13.747286 [info ] [MainThread]:   user: te_fmonteiro
+[0m20:51:13.747286 [info ] [MainThread]:   database: te_analytics
+[0m20:51:13.747286 [info ] [MainThread]:   warehouse: test_wh
+[0m20:51:13.748655 [info ] [MainThread]:   role: te_role_fmonteiro
+[0m20:51:13.748655 [info ] [MainThread]:   schema: te_fmonteiro
+[0m20:51:13.750066 [info ] [MainThread]:   authenticator: None
+[0m20:51:13.750066 [info ] [MainThread]:   private_key_path: None
+[0m20:51:13.751145 [info ] [MainThread]:   oauth_client_id: None
+[0m20:51:13.751145 [info ] [MainThread]:   query_tag: None
+[0m20:51:13.751145 [info ] [MainThread]:   client_session_keep_alive: False
+[0m20:51:13.752496 [info ] [MainThread]:   host: None
+[0m20:51:13.752496 [info ] [MainThread]:   port: None
+[0m20:51:13.753529 [info ] [MainThread]:   proxy_host: None
+[0m20:51:13.755045 [info ] [MainThread]:   proxy_port: None
+[0m20:51:13.756057 [info ] [MainThread]:   protocol: None
+[0m20:51:13.757150 [info ] [MainThread]:   connect_retries: 1
+[0m20:51:13.757150 [info ] [MainThread]:   connect_timeout: None
+[0m20:51:13.758238 [info ] [MainThread]:   retry_on_database_errors: False
+[0m20:51:13.758238 [info ] [MainThread]:   retry_all: False
+[0m20:51:13.759693 [info ] [MainThread]:   insecure_mode: False
+[0m20:51:13.759693 [info ] [MainThread]:   reuse_connections: None
+[0m20:51:13.760813 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m20:51:13.760813 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m20:51:13.761943 [debug] [MainThread]: Using snowflake connection "debug"
+[0m20:51:13.762475 [debug] [MainThread]: On debug: select 1 as id
+[0m20:51:13.763010 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:51:15.030608 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m20:51:15.032643 [debug] [MainThread]: On debug: Close
+[0m20:51:15.354277 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:51:15.355784 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m20:51:15.356785 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\fmmon\labs_project\dbt_project.yml> not found
+
+[0m20:51:15.357786 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m20:51:15.362573 [debug] [MainThread]: Command `dbt debug` failed at 20:51:15.361578 after 2.09 seconds
+[0m20:51:15.363570 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:51:15.364568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AEEEDC48F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AEEF3ECE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AEEF05FFE0>]}
+[0m20:51:15.365074 [debug] [MainThread]: Flushing usage events
+[0m20:53:36.577060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0760C39B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0760C3050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0760C2FF0>]}
+
+
+============================== 20:53:36.581380 | c8ce4def-4d50-4780-9424-71df5561aee6 ==============================
+[0m20:53:36.581380 [info ] [MainThread]: Running with dbt=1.7.9
+[0m20:53:36.581789 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\fmmon\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:53:36.582791 [info ] [MainThread]: dbt version: 1.7.9
+[0m20:53:36.583330 [info ] [MainThread]: python version: 3.12.2
+[0m20:53:36.584334 [info ] [MainThread]: python path: C:\Users\fmmon\labs_project\Scripts\python.exe
+[0m20:53:36.584334 [info ] [MainThread]: os info: Windows-11-10.0.22621-SP0
+[0m20:53:36.945619 [info ] [MainThread]: Using profiles dir at C:\Users\fmmon\.dbt
+[0m20:53:36.946619 [info ] [MainThread]: Using profiles.yml file at C:\Users\fmmon\.dbt\profiles.yml
+[0m20:53:36.946619 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\fmmon\labs_project\dbt_project.yml
+[0m20:53:36.948370 [info ] [MainThread]: adapter type: snowflake
+[0m20:53:36.949370 [info ] [MainThread]: adapter version: 1.7.2
+[0m20:53:36.950848 [info ] [MainThread]: Configuration:
+[0m20:53:36.951383 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:53:36.952870 [info ] [MainThread]:   dbt_project.yml file [[31mERROR invalid[0m]
+[0m20:53:36.955044 [info ] [MainThread]: Required dependencies:
+[0m20:53:36.956035 [debug] [MainThread]: Executing "git --help"
+[0m20:53:36.962825 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m20:53:36.962825 [info ] [MainThread]: Connection:
+[0m20:53:36.964339 [info ] [MainThread]:   account: dz46997.us-east-1
+[0m20:53:36.965340 [info ] [MainThread]:   user: te_fmonteiro
+[0m20:53:36.965844 [info ] [MainThread]:   database: te_analytics
+[0m20:53:36.966845 [info ] [MainThread]:   warehouse: test_wh
+[0m20:53:36.966845 [info ] [MainThread]:   role: te_role_fmonteiro
+[0m20:53:36.967841 [info ] [MainThread]:   schema: te_fmonteiro
+[0m20:53:36.968839 [info ] [MainThread]:   authenticator: None
+[0m20:53:36.969838 [info ] [MainThread]:   private_key_path: None
+[0m20:53:36.970836 [info ] [MainThread]:   oauth_client_id: None
+[0m20:53:36.971731 [info ] [MainThread]:   query_tag: None
+[0m20:53:36.972849 [info ] [MainThread]:   client_session_keep_alive: False
+[0m20:53:36.972849 [info ] [MainThread]:   host: None
+[0m20:53:36.974311 [info ] [MainThread]:   port: None
+[0m20:53:36.974311 [info ] [MainThread]:   proxy_host: None
+[0m20:53:36.975311 [info ] [MainThread]:   proxy_port: None
+[0m20:53:36.976281 [info ] [MainThread]:   protocol: None
+[0m20:53:36.977350 [info ] [MainThread]:   connect_retries: 1
+[0m20:53:36.978449 [info ] [MainThread]:   connect_timeout: None
+[0m20:53:36.978449 [info ] [MainThread]:   retry_on_database_errors: False
+[0m20:53:36.979502 [info ] [MainThread]:   retry_all: False
+[0m20:53:36.980740 [info ] [MainThread]:   insecure_mode: False
+[0m20:53:36.981980 [info ] [MainThread]:   reuse_connections: None
+[0m20:53:36.983223 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m20:53:36.984737 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m20:53:36.986192 [debug] [MainThread]: Using snowflake connection "debug"
+[0m20:53:36.986192 [debug] [MainThread]: On debug: select 1 as id
+[0m20:53:36.987384 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:53:38.458008 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m20:53:38.460642 [debug] [MainThread]: On debug: Close
+[0m20:53:38.778491 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:53:38.779489 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m20:53:38.781482 [info ] [MainThread]: Project loading failed for the following reason:
+Runtime Error
+  dbt_project.yml does not parse to a dictionary
+
+
+[0m20:53:38.782482 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m20:53:38.785217 [debug] [MainThread]: Command `dbt debug` failed at 20:53:38.785217 after 2.34 seconds
+[0m20:53:38.786725 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:53:38.787231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C075CA48F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C075F803E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C076D617C0>]}
+[0m20:53:38.788662 [debug] [MainThread]: Flushing usage events
+[0m20:56:11.698189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19A0D0F80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19A0D3EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19A0D39B0>]}
+
+
+============================== 20:56:11.702210 | c54f6980-3ebc-403d-8a96-973f869b3fa6 ==============================
+[0m20:56:11.702210 [info ] [MainThread]: Running with dbt=1.7.9
+[0m20:56:11.703178 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\fmmon\\labs_project\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\fmmon\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m20:56:11.703178 [info ] [MainThread]: dbt version: 1.7.9
+[0m20:56:11.704175 [info ] [MainThread]: python version: 3.12.2
+[0m20:56:11.704175 [info ] [MainThread]: python path: C:\Users\fmmon\labs_project\Scripts\python.exe
+[0m20:56:11.705412 [info ] [MainThread]: os info: Windows-11-10.0.22621-SP0
+[0m20:56:12.047454 [info ] [MainThread]: Using profiles dir at C:\Users\fmmon\.dbt
+[0m20:56:12.048713 [info ] [MainThread]: Using profiles.yml file at C:\Users\fmmon\.dbt\profiles.yml
+[0m20:56:12.048713 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\fmmon\labs_project\dbt_project.yml
+[0m20:56:12.049712 [info ] [MainThread]: adapter type: snowflake
+[0m20:56:12.050814 [info ] [MainThread]: adapter version: 1.7.2
+[0m20:56:12.131242 [info ] [MainThread]: Configuration:
+[0m20:56:12.131242 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:56:12.132683 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:56:12.133093 [info ] [MainThread]: Required dependencies:
+[0m20:56:12.133093 [debug] [MainThread]: Executing "git --help"
+[0m20:56:12.138739 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m20:56:12.138739 [info ] [MainThread]: Connection:
+[0m20:56:12.140153 [info ] [MainThread]:   account: dz46997.us-east-1
+[0m20:56:12.140153 [info ] [MainThread]:   user: te_fmonteiro
+[0m20:56:12.141408 [info ] [MainThread]:   database: te_analytics
+[0m20:56:12.141408 [info ] [MainThread]:   warehouse: test_wh
+[0m20:56:12.142653 [info ] [MainThread]:   role: te_role_fmonteiro
+[0m20:56:12.142653 [info ] [MainThread]:   schema: te_fmonteiro
+[0m20:56:12.142653 [info ] [MainThread]:   authenticator: None
+[0m20:56:12.144162 [info ] [MainThread]:   private_key_path: None
+[0m20:56:12.144162 [info ] [MainThread]:   oauth_client_id: None
+[0m20:56:12.145163 [info ] [MainThread]:   query_tag: None
+[0m20:56:12.146563 [info ] [MainThread]:   client_session_keep_alive: False
+[0m20:56:12.147069 [info ] [MainThread]:   host: None
+[0m20:56:12.148071 [info ] [MainThread]:   port: None
+[0m20:56:12.149074 [info ] [MainThread]:   proxy_host: None
+[0m20:56:12.150624 [info ] [MainThread]:   proxy_port: None
+[0m20:56:12.151129 [info ] [MainThread]:   protocol: None
+[0m20:56:12.151129 [info ] [MainThread]:   connect_retries: 1
+[0m20:56:12.152600 [info ] [MainThread]:   connect_timeout: None
+[0m20:56:12.152600 [info ] [MainThread]:   retry_on_database_errors: False
+[0m20:56:12.153729 [info ] [MainThread]:   retry_all: False
+[0m20:56:12.154232 [info ] [MainThread]:   insecure_mode: False
+[0m20:56:12.155231 [info ] [MainThread]:   reuse_connections: None
+[0m20:56:12.155231 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m20:56:12.156089 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m20:56:12.157304 [debug] [MainThread]: Using snowflake connection "debug"
+[0m20:56:12.157304 [debug] [MainThread]: On debug: select 1 as id
+[0m20:56:12.157304 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:56:13.475353 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m20:56:13.477391 [debug] [MainThread]: On debug: Close
+[0m20:56:13.817176 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:56:13.818175 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:56:13.819366 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m20:56:13.821025 [debug] [MainThread]: Command `dbt debug` failed at 20:56:13.820521 after 2.25 seconds
+[0m20:56:13.821025 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:56:13.821025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F199DF7500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19AC11970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19AEC7E30>]}
+[0m20:56:13.822526 [debug] [MainThread]: Flushing usage events
+[0m20:59:12.648368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11E3A1B80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11E3A1E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11E3A2E10>]}
+
+
+============================== 20:59:12.652596 | c6b38818-3441-4796-a1a9-3ec198f8ff8f ==============================
+[0m20:59:12.652596 [info ] [MainThread]: Running with dbt=1.7.9
+[0m20:59:12.653028 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\fmmon\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\fmmon\\labs_project\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:59:13.168449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c6b38818-3441-4796-a1a9-3ec198f8ff8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11EA80EF0>]}
+[0m20:59:13.256283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c6b38818-3441-4796-a1a9-3ec198f8ff8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11F133050>]}
+[0m20:59:13.257401 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m20:59:13.275082 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m20:59:13.284649 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m20:59:13.286184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c6b38818-3441-4796-a1a9-3ec198f8ff8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11F3DB1A0>]}
+[0m20:59:14.693600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c6b38818-3441-4796-a1a9-3ec198f8ff8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11F1CFDD0>]}
+[0m20:59:14.754288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c6b38818-3441-4796-a1a9-3ec198f8ff8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11EE79EB0>]}
+[0m20:59:14.755794 [info ] [MainThread]: Found 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m20:59:14.756361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c6b38818-3441-4796-a1a9-3ec198f8ff8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11DF5B9E0>]}
+[0m20:59:14.757526 [info ] [MainThread]: 
+[0m20:59:14.759200 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:59:14.760200 [debug] [MainThread]: Command end result
+[0m20:59:14.771093 [debug] [MainThread]: Command `dbt run` succeeded at 20:59:14.770571 after 2.26 seconds
+[0m20:59:14.771670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11B5214F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11E212BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F11EFC0740>]}
+[0m20:59:14.772671 [debug] [MainThread]: Flushing usage events
+[0m21:14:31.021540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001961C8C3EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001961C8C2ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001961C8C2960>]}
+
+
+============================== 21:14:31.027083 | 4cb47660-607b-4d11-8d77-1142987560a9 ==============================
+[0m21:14:31.027083 [info ] [MainThread]: Running with dbt=1.7.9
+[0m21:14:31.027631 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\fmmon\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\fmmon\\labs_project\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:14:31.028632 [info ] [MainThread]: dbt version: 1.7.9
+[0m21:14:31.028632 [info ] [MainThread]: python version: 3.12.2
+[0m21:14:31.028632 [info ] [MainThread]: python path: C:\Users\fmmon\labs_project\Scripts\python.exe
+[0m21:14:31.030129 [info ] [MainThread]: os info: Windows-11-10.0.22621-SP0
+[0m21:14:31.504141 [info ] [MainThread]: Using profiles dir at C:\Users\fmmon\.dbt
+[0m21:14:31.505141 [info ] [MainThread]: Using profiles.yml file at C:\Users\fmmon\.dbt\profiles.yml
+[0m21:14:31.506148 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\fmmon\labs_project\dbt_project.yml
+[0m21:14:31.507688 [info ] [MainThread]: adapter type: snowflake
+[0m21:14:31.508392 [info ] [MainThread]: adapter version: 1.7.2
+[0m21:14:31.615351 [info ] [MainThread]: Configuration:
+[0m21:14:31.616240 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:14:31.617240 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:14:31.618240 [info ] [MainThread]: Required dependencies:
+[0m21:14:31.618240 [debug] [MainThread]: Executing "git --help"
+[0m21:14:31.625821 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m21:14:31.625821 [info ] [MainThread]: Connection:
+[0m21:14:31.626826 [info ] [MainThread]:   account: dz46997.us-east-1
+[0m21:14:31.627831 [info ] [MainThread]:   user: te_fmonteiro
+[0m21:14:31.628964 [info ] [MainThread]:   database: te_analytics
+[0m21:14:31.629478 [info ] [MainThread]:   warehouse: test_wh
+[0m21:14:31.630780 [info ] [MainThread]:   role: te_role_fmonteiro
+[0m21:14:31.631362 [info ] [MainThread]:   schema: te_fmonteiro
+[0m21:14:31.631867 [info ] [MainThread]:   authenticator: None
+[0m21:14:31.633071 [info ] [MainThread]:   private_key_path: None
+[0m21:14:31.634438 [info ] [MainThread]:   oauth_client_id: None
+[0m21:14:31.635371 [info ] [MainThread]:   query_tag: None
+[0m21:14:31.636313 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:14:31.636313 [info ] [MainThread]:   host: None
+[0m21:14:31.637313 [info ] [MainThread]:   port: None
+[0m21:14:31.637313 [info ] [MainThread]:   proxy_host: None
+[0m21:14:31.639089 [info ] [MainThread]:   proxy_port: None
+[0m21:14:31.640102 [info ] [MainThread]:   protocol: None
+[0m21:14:31.641175 [info ] [MainThread]:   connect_retries: 1
+[0m21:14:31.642175 [info ] [MainThread]:   connect_timeout: None
+[0m21:14:31.642175 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:14:31.643413 [info ] [MainThread]:   retry_all: False
+[0m21:14:31.644436 [info ] [MainThread]:   insecure_mode: False
+[0m21:14:31.645447 [info ] [MainThread]:   reuse_connections: None
+[0m21:14:31.646464 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m21:14:31.651054 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:14:31.653053 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:14:31.653053 [debug] [MainThread]: On debug: select 1 as id
+[0m21:14:31.654569 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:14:33.537346 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m21:14:33.538482 [debug] [MainThread]: On debug: Close
+[0m21:14:33.858488 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:14:33.859923 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:14:33.860925 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m21:14:33.864566 [debug] [MainThread]: Command `dbt debug` failed at 21:14:33.863557 after 2.98 seconds
+[0m21:14:33.865080 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:14:33.866626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001961C6E2E70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001961D3F2DE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001961D657C50>]}
+[0m21:14:33.867639 [debug] [MainThread]: Flushing usage events
+[0m21:18:15.688136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B79CE11AF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B79CE13BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B79CE138F0>]}
+
+
+============================== 21:18:15.691916 | a7171eb5-602e-41f6-a072-218e6c5282e2 ==============================
+[0m21:18:15.691916 [info ] [MainThread]: Running with dbt=1.7.9
+[0m21:18:15.693010 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\fmmon\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\fmmon\\labs_project\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:18:15.693010 [info ] [MainThread]: dbt version: 1.7.9
+[0m21:18:15.693010 [info ] [MainThread]: python version: 3.12.2
+[0m21:18:15.694518 [info ] [MainThread]: python path: C:\Users\fmmon\labs_project\Scripts\python.exe
+[0m21:18:15.695026 [info ] [MainThread]: os info: Windows-11-10.0.22621-SP0
+[0m21:18:16.058470 [info ] [MainThread]: Using profiles dir at C:\Users\fmmon\.dbt
+[0m21:18:16.058470 [info ] [MainThread]: Using profiles.yml file at C:\Users\fmmon\.dbt\profiles.yml
+[0m21:18:16.059635 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\fmmon\labs_project\dbt_project.yml
+[0m21:18:16.060138 [info ] [MainThread]: adapter type: snowflake
+[0m21:18:16.061305 [info ] [MainThread]: adapter version: 1.7.2
+[0m21:18:16.140997 [info ] [MainThread]: Configuration:
+[0m21:18:16.142020 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:18:16.142020 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:18:16.143777 [info ] [MainThread]: Required dependencies:
+[0m21:18:16.144281 [debug] [MainThread]: Executing "git --help"
+[0m21:18:16.151557 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m21:18:16.153555 [info ] [MainThread]: Connection:
+[0m21:18:16.155058 [info ] [MainThread]:   account: dz46997.us-east-1
+[0m21:18:16.155058 [info ] [MainThread]:   user: te_fmonteiro
+[0m21:18:16.156292 [info ] [MainThread]:   database: te_analytics
+[0m21:18:16.157555 [info ] [MainThread]:   warehouse: test_wh
+[0m21:18:16.158063 [info ] [MainThread]:   role: te_role_fmonteiro
+[0m21:18:16.158063 [info ] [MainThread]:   schema: te_fmonteiro
+[0m21:18:16.159378 [info ] [MainThread]:   authenticator: None
+[0m21:18:16.159378 [info ] [MainThread]:   private_key_path: None
+[0m21:18:16.160621 [info ] [MainThread]:   oauth_client_id: None
+[0m21:18:16.160621 [info ] [MainThread]:   query_tag: None
+[0m21:18:16.161909 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:18:16.161909 [info ] [MainThread]:   host: None
+[0m21:18:16.162960 [info ] [MainThread]:   port: None
+[0m21:18:16.164468 [info ] [MainThread]:   proxy_host: None
+[0m21:18:16.165470 [info ] [MainThread]:   proxy_port: None
+[0m21:18:16.165470 [info ] [MainThread]:   protocol: None
+[0m21:18:16.166458 [info ] [MainThread]:   connect_retries: 1
+[0m21:18:16.166458 [info ] [MainThread]:   connect_timeout: None
+[0m21:18:16.167467 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:18:16.168676 [info ] [MainThread]:   retry_all: False
+[0m21:18:16.169679 [info ] [MainThread]:   insecure_mode: False
+[0m21:18:16.170768 [info ] [MainThread]:   reuse_connections: None
+[0m21:18:16.171772 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m21:18:16.172778 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:18:16.172778 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:18:16.172778 [debug] [MainThread]: On debug: select 1 as id
+[0m21:18:16.174284 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:18:17.474458 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:18:17.475496 [debug] [MainThread]: On debug: Close
+[0m21:18:17.807407 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:18:17.809026 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:18:17.811263 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m21:18:17.816436 [debug] [MainThread]: Command `dbt debug` failed at 21:18:17.815278 after 2.26 seconds
+[0m21:18:17.818301 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:18:17.820296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B79D82A840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B79DA229C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B79D10D1F0>]}
+[0m21:18:17.821292 [debug] [MainThread]: Flushing usage events
