@@ -1,70 +1,76 @@
-# NVIDIA Overvaluation Analysis
+# Nvidia Overvaluation Analysis and Macroeconomic Correlation
 
-## 📌 Introduction
-This project analyzes whether NVIDIA's stock is currently overvalued by comparing its fundamental indicators to macroeconomic factors. The goal is to assess if the stock price reflects its intrinsic value or if there are signs of overvaluation.
+## Project Overview
+This project analyzes the overvaluation of Nvidia (NVDA) stock in relation to key macroeconomic indicators. By leveraging historical stock price data and economic metrics, we aim to uncover patterns, correlations, and insights into whether Nvidia's growth is driven by fundamentals or speculative trends.
 
-## 🎯 Objectives
-- Investigate the relationship between NVIDIA's stock price and macroeconomic indicators.
-- Perform fundamental valuation using financial ratios and Discounted Cash Flow (DCF) modeling.
-- Identify potential market inefficiencies that could indicate a speculative bubble.
+## Objectives
+- Assess the correlation between Nvidia's stock performance and macroeconomic indicators.
+- Evaluate the sustainability of Nvidia's market valuation.
+- Use statistical and machine learning models to predict potential future trends.
 
-## 📊 Data Sources
-- **Stock Prices & Financials**: Yahoo Finance API
-- **Macroeconomic Indicators**: FRED API (Federal Reserve Economic Data)
-- **Market Sentiment (optional)**: Twitter API, Google Trends
+## Data Sources
+- **Stock Data**: Yahoo Finance API (`yfinance`)
+- **Macroeconomic Indicators**:
+  - GDP (USA & Global) - [FRED API](https://fred.stlouisfed.org/)
+  - Inflation (CPI USA) - FRED API
+  - Federal Funds Rate - FRED API
+  - S&P 500 Index - Yahoo Finance API
+  - Industrial Production (USA) - [World Bank API](https://databank.worldbank.org/source/world-development-indicators)
+  - Semiconductor Investment - [BEA](https://www.bea.gov/)
 
-## 🏗️ Methodology
-1. **Data Collection**: Gather historical stock prices, company financials, and macroeconomic data.
-2. **Exploratory Data Analysis (EDA)**: Identify trends, correlations, and potential anomalies.
-3. **Valuation Models**:
-   - Fundamental analysis using P/E, P/S, and EV/EBITDA ratios.
-   - Discounted Cash Flow (DCF) analysis to estimate intrinsic value.
-4. **Machine Learning (Optional)**: Use regression models to predict stock price based on macroeconomic variables.
-5. **Visualization & Insights**: Build interactive charts to present key findings.
+## Tools & Technologies
+- **Python** for data analysis and modeling
+- **Pandas, NumPy** for data manipulation
+- **Matplotlib, Seaborn** for visualization
+- **Statsmodels, Scikit-learn** for regression and statistical modeling
+- **Facebook Prophet, ARIMA** for time-series forecasting
+- **Jupyter Notebook** for exploratory analysis
+- **GitHub** for version control
 
-## 🛠️ Tech Stack
-- **Programming**: Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)
-- **APIs**: Yahoo Finance, FRED
-- **Valuation Tools**: DCF, Financial Ratios
-- **Visualization**: Plotly, Dash
-- **Data Storage**: SQLite (if necessary for storing processed data)
-
-## 📂 Project Structure
+## Project Structure
 ```
-/ nvidia_overvaluation_analysis
-│── /data               # Raw and processed data
-│── /notebooks          # Jupyter notebooks for analysis
-│── /scripts            # Python scripts for data collection & modeling
-│── /visualizations     # Reports and dashboards
-│── README.md           # Project documentation
+├── data/               # Raw and processed data
+├── notebooks/          # Jupyter notebooks for analysis
+├── src/                # Python scripts for data processing & modeling
+├── results/            # Final reports and visualizations
+├── README.md           # Project documentation
+├── requirements.txt    # Python dependencies
+└── .gitignore          # Files to ignore in Git
 ```
 
-## 🚀 How to Run
-1. Clone this repository:
+## Installation & Setup
+1. Clone the repository:
    ```bash
-   git clone https://github.com/FMPING/nvidia_overvaluation_analysis.git
+   git clone https://github.com/yourusername/nvidia_macro_analysis.git
+   cd nvidia_macro_analysis
    ```
-2. Install dependencies:
+2. Create a virtual environment and install dependencies:
    ```bash
+   python -m venv env
+   source env/bin/activate  # On Windows use `env\Scripts\activate`
    pip install -r requirements.txt
    ```
-3. Run data collection script:
+3. Run the Jupyter notebook:
    ```bash
-   python scripts/data_collection.py
-   ```
-4. Open Jupyter Notebook for analysis:
-   ```bash
-   jupyter notebook notebooks/eda.ipynb
+   jupyter notebook
    ```
 
-## 📈 Results & Insights
-TBD - This section will be updated once the analysis is completed.
+## Key Findings (So Far)
+- Nvidia's stock price has increasingly decoupled from GDP trends, indicating a shift towards innovation-driven valuation.
+- Federal Reserve interest rate decisions have a strong correlation with Nvidia's stock volatility.
+- The P/E ratio of Nvidia is significantly above historical averages, suggesting a potential overvaluation.
+
+## Next Steps
+- Implement a deeper machine learning model to forecast Nvidia's price trends.
+- Incorporate alternative macroeconomic indicators such as semiconductor industry investments.
+- Expand analysis to include sentiment data from financial news sources.
+
+## Contributions
+Feel free to contribute by submitting pull requests or reporting issues!
+
+## License
+This project is licensed under the MIT License.
 
 ---
-### ✨ Future Improvements
-- Implement a deep learning model to predict stock prices.
-- Expand the dataset to include more companies for comparison.
-- Develop a real-time dashboard for valuation tracking.
 
-📌 **Author:** [Felipe da Silva Monteiro](https://github.com/FMPING)
-
+### 🚀 Let's explore Nvidia's valuation beyond the hype! 📊
