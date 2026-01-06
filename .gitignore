@@ -15,3 +15,7 @@ dbt_packages/
 *.log
 *.msgpack
 *.gpickle
+
+# caches / artifacts
+*.msgpack
+*.gpickle
