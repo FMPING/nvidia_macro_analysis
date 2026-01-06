@@ -1,76 +1,45 @@
-# Nvidia Overvaluation Analysis and Macroeconomic Correlation
+# NVIDIA Overvaluation & Macroeconomic Regime Analysis
 
-## Project Overview
-This project analyzes the overvaluation of Nvidia (NVDA) stock in relation to key macroeconomic indicators. By leveraging historical stock price data and economic metrics, we aim to uncover patterns, correlations, and insights into whether Nvidia's growth is driven by fundamentals or speculative trends.
+This project analyzes whether NVIDIA (NVDA) stock valuation can be explained by macroeconomic conditions or if it has structurally decoupled from traditional economic drivers.
 
-## Objectives
-- Assess the correlation between Nvidia's stock performance and macroeconomic indicators.
-- Evaluate the sustainability of Nvidia's market valuation.
-- Use statistical and machine learning models to predict potential future trends.
-
-## Data Sources
-- **Stock Data**: Yahoo Finance API (`yfinance`)
-- **Macroeconomic Indicators**:
-  - GDP (USA & Global) - [FRED API](https://fred.stlouisfed.org/)
-  - Inflation (CPI USA) - FRED API
-  - Federal Funds Rate - FRED API
-  - S&P 500 Index - Yahoo Finance API
-  - Industrial Production (USA) - [World Bank API](https://databank.worldbank.org/source/world-development-indicators)
-  - Semiconductor Investment - [BEA](https://www.bea.gov/)
-
-## Tools & Technologies
-- **Python** for data analysis and modeling
-- **Pandas, NumPy** for data manipulation
-- **Matplotlib, Seaborn** for visualization
-- **Statsmodels, Scikit-learn** for regression and statistical modeling
-- **Facebook Prophet, ARIMA** for time-series forecasting
-- **Jupyter Notebook** for exploratory analysis
-- **GitHub** for version control
-
-## Project Structure
-```
-├── data/               # Raw and processed data
-├── notebooks/          # Jupyter notebooks for analysis
-├── src/                # Python scripts for data processing & modeling
-├── results/            # Final reports and visualizations
-├── README.md           # Project documentation
-├── requirements.txt    # Python dependencies
-└── .gitignore          # Files to ignore in Git
-```
-
-## Installation & Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/nvidia_macro_analysis.git
-   cd nvidia_macro_analysis
-   ```
-2. Create a virtual environment and install dependencies:
-   ```bash
-   python -m venv env
-   source env/bin/activate  # On Windows use `env\Scripts\activate`
-   pip install -r requirements.txt
-   ```
-3. Run the Jupyter notebook:
-   ```bash
-   jupyter notebook
-   ```
-
-## Key Findings (So Far)
-- Nvidia's stock price has increasingly decoupled from GDP trends, indicating a shift towards innovation-driven valuation.
-- Federal Reserve interest rate decisions have a strong correlation with Nvidia's stock volatility.
-- The P/E ratio of Nvidia is significantly above historical averages, suggesting a potential overvaluation.
-
-## Next Steps
-- Implement a deeper machine learning model to forecast Nvidia's price trends.
-- Incorporate alternative macroeconomic indicators such as semiconductor industry investments.
-- Expand analysis to include sentiment data from financial news sources.
-
-## Contributions
-Feel free to contribute by submitting pull requests or reporting issues!
-
-## License
-This project is licensed under the MIT License.
+The analysis focuses on **valuation sustainability across macro regimes**, rather than short-term price prediction.
 
 ---
 
-### 🚀 Let's explore Nvidia's valuation beyond the hype! 📊
+## 🎯 Research Question
+
+**Is NVIDIA overvalued relative to macroeconomic fundamentals, or is its valuation justified under specific macro regimes (rates, liquidity, growth)?**
+
+Key angles:
+- Does NVDA valuation expand disproportionately during low-rate / high-liquidity regimes?
+- Which macro variables explain **valuation multiple expansion**, not just price movement?
+- Are current valuation levels statistically outside historical macro-consistent ranges?
+
+---
+
+## 📊 Methodology
+
+### 1. Data Collection
+- **Stock data:** NVDA price & valuation metrics (Yahoo Finance)
+- **Macro indicators:**
+  - GDP (US & Global) — FRED
+  - CPI (US) — FRED
+  - Federal Funds Rate — FRED
+  - S&P 500 Index — Yahoo Finance
+  - Industrial Production — World Bank
+  - Semiconductor Investment — BEA
+
+### 2. Feature Engineering
+- Returns, volatility, drawdowns
+- Valuation multiples (P/E, normalized P/E)
+- Macro lags (3M, 6M, 12M)
+- Regime flags (high vs low rates, inflationary vs disinflationary)
+
+### 3. Modeling
+- Correlation & stability analysis
+- Multivariate regression (OLS / regularized)
+- Regime-based valuation comparison
+- Time-series forecasting (ARIMA / Prophet) as supporting evidence
+
+---
+
