@@ -1,0 +1,25 @@
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# dbt
+target/
+dbt_packages/
+logs/
+log/
+*.log
+
+# caches / artifacts
+*.msgpack
+*.gpickle
